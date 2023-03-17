@@ -1,5 +1,7 @@
+import * as Haptics from "expo-haptics";
+import { Image } from "expo-image";
 import { useRouter } from "expo-router";
-import { Text, View } from "react-native";
+import { ScrollView, Text, View } from "react-native";
 import {
   IconButton,
   ListItem,
@@ -20,11 +22,12 @@ const SettingsScreen = () => {
           iconStyle={styles.closeIcon}
           contentFit={"contain"}
           onPress={() => {
+            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
             router.back();
           }}
         />
       </View>
-      <View style={styles.contentContainer}>
+      <ScrollView>
         <SondaPlusText />
         <MembershipPicker />
         <ListItem
@@ -35,7 +38,42 @@ const SettingsScreen = () => {
           text="See Features"
           iconPath={require("../../assets/images/stars.svg")}
         />
-      </View>
+        <Text style={styles.sectionHeading}>Settings</Text>
+        <ListItem
+          text="Customize"
+          iconPath={require("../../assets/images/wand.svg")}
+        />
+        <Text style={styles.sectionHeading}>Information</Text>
+        <ListItem
+          text="Contact"
+          iconPath={require("../../assets/images/mail.svg")}
+        />
+        <ListItem
+          text="Send Feedback"
+          iconPath={require("../../assets/images/message.svg")}
+        />
+        <ListItem
+          text="Privacy Policy"
+          iconPath={require("../../assets/images/shield.svg")}
+        />
+        <ListItem
+          text="Terms and Conditions"
+          iconPath={require("../../assets/images/t&c.svg")}
+        />
+        <ListItem
+          text="About Sonda"
+          iconPath={require("../../assets/images/about-us.svg")}
+        />
+        <ListItem
+          text="Do you love us?"
+          iconPath={require("../../assets/images/love.svg")}
+        />
+        <Image
+          style={styles.madeInPRLogo}
+          source={require("../../assets/images/made-in-pr.png")}
+          contentFit="contain"
+        ></Image>
+      </ScrollView>
     </View>
   );
 };

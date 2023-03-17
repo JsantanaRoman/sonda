@@ -8,9 +8,9 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.BLACK,
     color: Colors.PRIMARY,
     justifyContent: "flex-start",
+    paddingHorizontal: Spacing.SCALE_24,
   },
   headingContainer: {
-    paddingHorizontal: Spacing.SCALE_24,
     padingVertical: Spacing.SCALE_32,
     display: "flex",
     flexDirection: "row",
@@ -29,9 +29,18 @@ const styles = StyleSheet.create({
     height: 18,
     width: 18,
   },
-  contentContainer: {
-    paddingHorizontal: Spacing.SCALE_24,
-    display: "flex",
+  sectionHeading: {
+    fontSize: 20,
+    fontFamily: FONT_FAMILY_REGULAR,
+    lineHeight: 22,
+    color: Colors.WHITE,
+    marginBottom: 24,
+    marginTop: 40,
+  },
+  madeInPRLogo: {
+    width: 99,
+    height: 106,
+    marginVertical: 40,
   },
 });
 

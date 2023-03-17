@@ -1,10 +1,11 @@
+import * as Haptics from "expo-haptics";
 import { LinearGradient } from "expo-linear-gradient";
-import { Text, Pressable, View } from "react-native";
-import styles from "./styles";
+import { Pressable, Text, View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "_store";
 import { setMembershipSelected } from "../../store/slices/membershipSelected";
 import BaseButton from "../BaseButton";
+import styles from "./styles";
 
 const MembershipPicker: React.FC = () => {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ const MembershipPicker: React.FC = () => {
   );
 
   const handlePress = () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     dispatch(
       setMembershipSelected(
         membershipSelected === "Supporter" ? "Beliver" : "Supporter"
@@ -73,7 +75,7 @@ const MembershipPicker: React.FC = () => {
             ? "Pay Yearly"
             : "Get Lifetime Access"
         }
-        onPress={null}
+        onPress={Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}
       />
     </View>
   );
