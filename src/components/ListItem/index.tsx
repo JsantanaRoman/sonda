@@ -1,5 +1,6 @@
+import * as Haptics from "expo-haptics";
 import { Image, ImageSource } from "expo-image";
-import { View, Text, TouchableOpacity } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import styles from "./styles";
 
 export type Props = {
@@ -10,7 +11,13 @@ export type Props = {
 
 const ListItem: React.FC<Props> = ({ text, iconPath, onPress }) => {
   return (
-    <TouchableOpacity activeOpacity={0.6} onPress={onPress}>
+    <TouchableOpacity
+      activeOpacity={0.6}
+      onPress={() => {
+        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+        onPress;
+      }}
+    >
       <View style={styles.listItemContainer}>
         <Image
           style={styles.listItemIcon}
