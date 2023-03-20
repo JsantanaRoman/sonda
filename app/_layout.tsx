@@ -106,6 +106,13 @@ export default function Layout() {
             headerShown: false,
           }}
         />
+        <Stack.Screen
+          name="customize"
+          options={{
+            presentation: "modal",
+            headerShown: false,
+          }}
+        />
       </Stack>
     </Provider>
   );

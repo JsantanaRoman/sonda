@@ -10,14 +10,10 @@ export type Props = {
 };
 
 const ListItem: React.FC<Props> = ({ text, iconPath, onPress }) => {
+  console.log(onPress);
+
   return (
-    <TouchableOpacity
-      activeOpacity={0.6}
-      onPress={() => {
-        Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-        onPress;
-      }}
-    >
+    <TouchableOpacity activeOpacity={0.6} onPress={onPress}>
       <View style={styles.listItemContainer}>
         <Image
           style={styles.listItemIcon}

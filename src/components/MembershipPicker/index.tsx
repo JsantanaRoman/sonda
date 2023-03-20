@@ -75,7 +75,7 @@ const MembershipPicker: React.FC = () => {
             ? "Pay Yearly"
             : "Get Lifetime Access"
         }
-        onPress={Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}
+        onPress={() => Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}
       />
     </View>
   );

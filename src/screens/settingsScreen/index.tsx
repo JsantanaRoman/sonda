@@ -42,6 +42,10 @@ const SettingsScreen = () => {
         <ListItem
           text="Customize"
           iconPath={require("../../assets/images/wand.svg")}
+          onPress={() => {
+            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+            router.push("/customize");
+          }}
         />
         <Text style={styles.sectionHeading}>Information</Text>
         <ListItem
