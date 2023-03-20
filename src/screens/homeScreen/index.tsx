@@ -7,7 +7,7 @@ import { Colors } from "_styles";
 import { Constants } from "_utils";
 import { setPlayAll } from "../../store/slices/playAll";
 import styles from "./style";
-
+// Preview One
 const HomeScreen = () => {
   const dispatch = useDispatch();
   const { playAll } = useSelector((state: RootState) => state.playAll);
