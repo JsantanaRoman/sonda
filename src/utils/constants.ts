@@ -88,3 +88,18 @@ export const customLogos = [
   { id: 11, image: require("../assets/images/logos/logo-11.png") },
   { id: 12, image: require("../assets/images/logos/logo-12.png") },
 ];
+
+export const makersList = [
+  {
+    id: 1,
+    image: require("../assets/images/logos/logo-1.png"),
+    name: "Jesus Santana",
+    role: "Developer",
+  },
+  {
+    id: 2,
+    image: require("../assets/images/logos/logo-2.png"),
+    name: "Orlando Marty",
+    role: "Designer",
+  },
+];

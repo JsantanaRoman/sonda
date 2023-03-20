@@ -25,10 +25,6 @@ const styles = StyleSheet.create({
     lineHeight: 45.6,
     color: Colors.WHITE,
   },
-  closeIcon: {
-    height: 18,
-    width: 18,
-  },
   sectionHeading: {
     fontSize: 20,
     fontFamily: FONT_FAMILY_REGULAR,

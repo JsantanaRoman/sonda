@@ -8,6 +8,7 @@ import {
   MembershipPicker,
   SondaPlusText,
 } from "_components";
+import { globalStyles } from "../../styles/styles";
 import styles from "./style";
 
 const SettingsScreen = () => {
@@ -19,7 +20,7 @@ const SettingsScreen = () => {
         <Text style={styles.heading}>Settings</Text>
         <IconButton
           iconPath={require("../../assets/images/close.svg")}
-          iconStyle={styles.closeIcon}
+          iconStyle={globalStyles.closeIcon}
           contentFit={"contain"}
           onPress={() => {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -67,6 +68,10 @@ const SettingsScreen = () => {
         <ListItem
           text="About Sonda"
           iconPath={require("../../assets/images/about-us.svg")}
+          onPress={() => {
+            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+            router.push("/about");
+          }}
         />
         <ListItem
           text="Do you love us?"

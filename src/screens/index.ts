@@ -1,6 +1,13 @@
+import AboutScreen from "./AboutScreen";
 import CustomizeScreen from "./CustomizeScreen";
-import HomeScreen from "./homeScreen";
-import PlaylistsScreen from "./playlistsScreen";
-import SettingsScreen from "./settingsScreen";
+import HomeScreen from "./HomeScreen";
+import PlaylistsScreen from "./PlaylistsScreen";
+import SettingsScreen from "./SettingsScreen";
 
-export { HomeScreen, PlaylistsScreen, SettingsScreen, CustomizeScreen };
+export {
+  AboutScreen,
+  HomeScreen,
+  PlaylistsScreen,
+  SettingsScreen,
+  CustomizeScreen,
+};

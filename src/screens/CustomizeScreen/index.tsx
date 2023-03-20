@@ -2,7 +2,8 @@ import { Image } from "expo-image";
 import { useRouter } from "expo-router";
 import { FlatList, Dimensions, Text, View } from "react-native";
 import { IconButton, RadioButton } from "_components";
-import { Constants } from "../../utils";
+import { Constants } from "_utils";
+import { globalStyles } from "../../styles/styles";
 import styles from "./style";
 
 const screenWidth = Dimensions.get("screen").width;
@@ -18,7 +19,7 @@ const CustomizeScreen = () => {
         <Text style={styles.heading}>Customize</Text>
         <IconButton
           iconPath={require("../../assets/images/close.svg")}
-          iconStyle={styles.closeIcon}
+          iconStyle={globalStyles.closeIcon}
           contentFit={"contain"}
           onPress={() => {
             router.back();

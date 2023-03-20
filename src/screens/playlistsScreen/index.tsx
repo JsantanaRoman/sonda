@@ -3,6 +3,7 @@ import { FlatList, Text, View } from "react-native";
 import { IconButton } from "_components";
 import { PlaylistCard } from "_components";
 import { Constants } from "_utils";
+import { globalStyles } from "../../styles/styles";
 import styles from "./style";
 
 const PlaylistsScreen = () => {
@@ -14,7 +15,7 @@ const PlaylistsScreen = () => {
         <Text style={styles.heading}>Playlist</Text>
         <IconButton
           iconPath={require("../../assets/images/close.svg")}
-          iconStyle={styles.closeIcon}
+          iconStyle={globalStyles.closeIcon}
           contentFit={"contain"}
           onPress={() => {
             router.back();
