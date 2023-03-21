@@ -1,7 +1,7 @@
-import { View, Text } from "react-native";
 import React from "react";
-import { styles } from "./styles";
+import { View } from "react-native";
 import { Colors } from "_styles";
+import { styles } from "./styles";
 
 export type Props = {
   isSelected: boolean;

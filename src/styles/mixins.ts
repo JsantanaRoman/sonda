@@ -1,7 +1,11 @@
 import { Dimensions, PixelRatio } from "react-native";
 
 const WINDOW_WIDTH = Dimensions.get("window").width;
+
 const guidelineBaseWidth = 375;
+
+export const containerSize = (count: number, offset: number) =>
+  WINDOW_WIDTH / count - offset;
 
 export const scaleSize = (size: number) =>
   (WINDOW_WIDTH / guidelineBaseWidth) * size;
@@ -30,16 +34,3 @@ export const margin = (top: any, right: any, bottom: any, left: any) =>
 
 export const padding = (top: any, right: any, bottom: any, left: any) =>
   dimensions(top, right, bottom, left, "padding");
-
-export const boxShadow = (
-  color: any,
-  offset = { height: 2, width: 2 },
-  radius = 8,
-  opacity = 0.2
-) => ({
-  shadowColor: color,
-  shadowOffset: offset,
-  shadowOpacity: opacity,
-  shadowRadius: radius,
-  elevation: radius,
-});

@@ -41,7 +41,6 @@ const HomeScreen = () => {
         }
         containerStyle={styles.playButtonContainer}
         iconStyle={styles.playButton}
-        contentFit={"contain"}
         onPress={handlePress}
       />
     </View>

@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Colors, Spacing, Typography } from "_styles";
+import { Colors, Mixins, Spacing, Typography } from "_styles";
 
 const styles = StyleSheet.create({
   card: {
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     marginBottom: Spacing.SCALE_8,
   },
   cardHeading: {
-    fontSize: 40,
+    fontSize: Mixins.scaleFont(40),
     fontWeight: Typography.FONT_WEIGHT_REGULAR,
     color: Colors.WHITE,
     paddingVertical: Spacing.SCALE_8,

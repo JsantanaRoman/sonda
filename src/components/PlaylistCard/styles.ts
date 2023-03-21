@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Colors, Spacing } from "_styles";
-import { FONT_FAMILY_BOLD, FONT_WEIGHT_BOLD } from "../../styles/typography";
+import { Colors, Mixins, Spacing, Typography } from "_styles";
 
 const styles = StyleSheet.create({
   playlistCard: {
@@ -16,9 +15,9 @@ const styles = StyleSheet.create({
     paddingBottom: Spacing.SCALE_32,
   },
   playlistCardText: {
-    fontFamily: FONT_FAMILY_BOLD,
-    fontSize: 20,
-    fontWeight: FONT_WEIGHT_BOLD,
+    fontFamily: Typography.FONT_FAMILY_BOLD,
+    fontSize: Mixins.scaleFont(20),
+    fontWeight: Typography.FONT_WEIGHT_BOLD,
     lineHeight: 23,
     letterSpacing: -0.02,
     textAlign: "center",

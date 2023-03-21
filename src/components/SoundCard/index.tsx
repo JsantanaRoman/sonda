@@ -5,8 +5,8 @@ import { Image } from "expo-image";
 import { useEffect, useRef, useState } from "react";
 import { Pressable, Text, View } from "react-native";
 import { useSelector } from "react-redux";
+import { RootState } from "_store";
 import { Colors } from "_styles";
-import { RootState } from "../../store";
 import styles from "./styles";
 
 export type Props = {

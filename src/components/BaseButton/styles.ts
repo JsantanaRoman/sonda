@@ -1,20 +1,18 @@
 import { StyleSheet } from "react-native";
-import { Colors } from "_styles";
-import { Typography } from "_styles";
+import { Colors, Mixins, Typography } from "_styles";
 
 const styles = StyleSheet.create({
   baseButton: {
-    display: "flex",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: Colors.PRIMARY,
     width: "100%",
     height: 54,
-    borderRadius: 12,
+    borderRadius: Mixins.scaleSize(12),
   },
   baseButtonText: {
     color: Colors.BLACK,
-    fontSize: 20,
+    fontSize: Mixins.scaleFont(20),
     lineHeight: 22,
     fontFamily: Typography.FONT_FAMILY_BOLD,
     fontWeight: Typography.FONT_WEIGHT_BOLD,

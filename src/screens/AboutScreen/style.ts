@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Colors, Spacing } from "_styles";
-import { FONT_FAMILY_REGULAR } from "../../styles/typography";
+import { Colors, Mixins, Spacing, Typography } from "_styles";
 
 const styles = StyleSheet.create({
   container: {
@@ -10,11 +9,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: Spacing.SCALE_16,
   },
   headingContainer: {
-    display: "flex",
     flexDirection: "row",
   },
   headingContainerRight: {
-    display: "flex",
     flexDirection: "column",
     justifyContent: "flex-start",
     alignItems: "center",
@@ -22,7 +19,6 @@ const styles = StyleSheet.create({
     flexGrow: 0,
   },
   headingContainerLeft: {
-    display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
@@ -32,52 +28,51 @@ const styles = StyleSheet.create({
   },
   headingTextLeft: {
     color: Colors.PRIMARY,
-    fontFamily: FONT_FAMILY_REGULAR,
-    fontSize: 58,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(58),
     lineHeight: 66,
   },
   headingTextRightOne: {
     color: "#4D4E50",
-    fontFamily: FONT_FAMILY_REGULAR,
-    fontSize: 30,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(30),
     lineHeight: 36,
   },
   headingTextRightTwo: {
     color: Colors.WHITE,
-    fontFamily: FONT_FAMILY_REGULAR,
-    fontSize: 32,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(32),
     lineHeight: 36,
   },
   sondaText: {
     color: Colors.WHITE,
-    fontFamily: FONT_FAMILY_REGULAR,
-    fontSize: 30,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(30),
     lineHeight: 34,
     marginBottom: 8,
   },
   sondaSubText: {
     color: "#4D4E50",
-    fontFamily: FONT_FAMILY_REGULAR,
-    fontSize: 16,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(16),
     lineHeight: 24,
     marginBottom: 40,
   },
   sondaDescription: {
     color: "#D7D7D7",
-    fontFamily: FONT_FAMILY_REGULAR,
-    fontSize: 16,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(16),
     lineHeight: 24,
     marginBottom: 40,
   },
   sectionHeading: {
     color: "#D7D7D7",
-    fontFamily: FONT_FAMILY_REGULAR,
-    fontSize: 30,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(30),
     lineHeight: 34,
     marginBottom: 16,
   },
   makersBox: {
-    display: "flex",
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#181818",
@@ -92,25 +87,24 @@ const styles = StyleSheet.create({
   },
   makersName: {
     color: Colors.WHITE,
-    fontFamily: FONT_FAMILY_REGULAR,
-    fontSize: 16,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(16),
     lineHeight: 24,
     marginBottom: 4,
   },
   makersRole: {
     color: "#D7D7D7",
-    fontFamily: FONT_FAMILY_REGULAR,
-    fontSize: 14,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(14),
     lineHeight: 24,
   },
   madeBy: {
     color: "#D7D7D7",
-    fontFamily: FONT_FAMILY_REGULAR,
-    fontSize: 14,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(14),
     lineHeight: 24,
   },
   centerContainer: {
-    display: "flex",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -125,8 +119,8 @@ const styles = StyleSheet.create({
   copyrightText: {
     textAlign: "center",
     color: "#D7D7D7",
-    fontFamily: FONT_FAMILY_REGULAR,
-    fontSize: 14,
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(14),
     lineHeight: 24,
   },
 });

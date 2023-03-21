@@ -1,12 +1,10 @@
 import { Image } from "expo-image";
-import { View, Text, ScrollView, Dimensions, FlatList } from "react-native";
-import { Constants } from "../../utils";
+import { FlatList, ScrollView, Text, View } from "react-native";
+import { Mixins } from "_styles";
+import { Constants } from "_utils";
 import styles from "./style";
 
 const AboutScreen = () => {
-  const screenWidth = Dimensions.get("screen").width;
-  const numberOfColumns = 2;
-  const tileSize = screenWidth / numberOfColumns - 32;
   return (
     <ScrollView style={styles.container}>
       <View style={styles.headingContainer}>
@@ -48,7 +46,7 @@ const AboutScreen = () => {
           <View
             style={[
               {
-                width: tileSize,
+                width: Mixins.containerSize(2, 32),
               },
               styles.makersBox,
             ]}

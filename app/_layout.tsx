@@ -4,12 +4,12 @@ import * as Haptics from "expo-haptics";
 import { Stack, useRouter } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useState } from "react";
-import { Platform, StyleSheet, View } from "react-native";
-import { Colors, Spacing } from "_styles";
+import { StyleSheet, View } from "react-native";
+import { Colors, Spacing, GlobalStyles } from "_styles";
 import { IconButton } from "_components";
 import { Provider } from "react-redux";
 import { store } from "_store";
-import { globalStyles } from "../src/styles/styles";
+import {} from "_styles";
 
 let customFonts = {
   "AtHauss-Regular": require("./../src/assets/fonts/AtHaussStd-Retina.otf"),
@@ -47,14 +47,9 @@ export default function Layout() {
     <Provider store={store}>
       <Stack
         screenOptions={{
-          headerTransparent: true,
-          headerBlurEffect: "dark",
-          headerStyle:
-            Platform.OS !== "ios"
-              ? {
-                  backgroundColor: Colors.BLACK,
-                }
-              : {},
+          headerStyle: {
+            backgroundColor: Colors.BLACK,
+          },
           headerTitle: "",
         }}
       >
@@ -65,7 +60,6 @@ export default function Layout() {
               <IconButton
                 iconPath={require("../src/assets/images/logo.svg")}
                 iconStyle={styles.headerLogo}
-                contentFit={"contain"}
                 onPress={() => {
                   Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
                 }}
@@ -76,7 +70,6 @@ export default function Layout() {
                 <IconButton
                   iconPath={require("../src/assets/images/hamburger.svg")}
                   iconStyle={styles.headerIcons}
-                  contentFit={"contain"}
                   onPress={() => {
                     router.push("/playlists");
                     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -88,7 +81,6 @@ export default function Layout() {
                     styles.headerIcons,
                     { marginLeft: Spacing.SCALE_24 },
                   ]}
-                  contentFit={"contain"}
                   onPress={() => {
                     router.push("/settings");
                     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -130,8 +122,7 @@ export default function Layout() {
               <View>
                 <IconButton
                   iconPath={require("../src/assets/images/close.svg")}
-                  iconStyle={globalStyles.closeIcon}
-                  contentFit={"contain"}
+                  iconStyle={GlobalStyles.globalStyles.closeIcon}
                   onPress={() => {
                     router.back();
                   }}

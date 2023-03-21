@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Colors, Spacing, Typography } from "_styles";
+import { Colors, Mixins, Spacing, Typography } from "_styles";
 
 const styles = StyleSheet.create({
   planCardsContainer: {
@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
   planCard: {
     height: 122,
-    width: 174,
+    width: Mixins.containerSize(2, 40),
     borderRadius: 16,
     margin: 3,
     backgroundColor: Colors.BLACK,
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
   planCardPrice: {
     fontFamily: Typography.FONT_FAMILY_BOLD,
-    fontSize: 32,
+    fontSize: Mixins.scaleFont(32),
     lineHeight: 36,
     letterSpacing: -2,
     color: Colors.WHITE,
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   planCardTerm: {
     fontFamily: Typography.FONT_FAMILY_REGULAR,
-    fontSize: 18,
+    fontSize: Mixins.scaleFont(18),
     lineHeight: 16,
     letterSpacing: -2,
     color: Colors.WHITE,
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
   planCardName: {
     fontFamily: Typography.FONT_FAMILY_REGULAR,
-    fontSize: 13,
+    fontSize: Mixins.scaleFont(13),
     lineHeight: 14,
     letterSpacing: -2,
     color: "#A7A7A7",

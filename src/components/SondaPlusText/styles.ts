@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Colors } from "_styles";
-import { FONT_FAMILY_REGULAR } from "../../styles/typography";
+import { Colors, Mixins, Typography } from "_styles";
 
 const styles = StyleSheet.create({
   sondaPlusTextContainer: {
@@ -9,13 +8,13 @@ const styles = StyleSheet.create({
   },
   sondaPlusTextOne: {
     color: Colors.WHITE,
-    fontSize: 24,
-    fontFamily: FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(24),
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
   },
   sondaPlusTextTwo: {
     color: Colors.WHITE,
-    fontSize: 20,
-    fontFamily: FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(20),
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
     paddingVertical: 2,
     paddingHorizontal: 15,
   },

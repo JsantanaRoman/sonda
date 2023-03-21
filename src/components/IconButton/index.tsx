@@ -5,7 +5,7 @@ export type Props = {
   iconPath: ImageSource;
   iconStyle?: ImageStyle | Array<ImageStyle>;
   containerStyle?: ViewStyle | Array<ViewStyle>;
-  contentFit: ImageContentFit;
+  contentFit?: ImageContentFit;
   onPress?: any;
 };
 
@@ -14,10 +14,15 @@ const IconButton: React.FC<Props> = ({
   iconStyle,
   containerStyle,
   onPress,
+  contentFit,
 }) => {
   return (
     <Pressable style={containerStyle} onPress={onPress}>
-      <Image style={iconStyle} source={iconPath} contentFit="contain"></Image>
+      <Image
+        style={iconStyle}
+        source={iconPath}
+        contentFit={contentFit ? contentFit : "contain"}
+      ></Image>
     </Pressable>
   );
 };

@@ -2,9 +2,9 @@ import * as Haptics from "expo-haptics";
 import { LinearGradient } from "expo-linear-gradient";
 import { Pressable, Text, View } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
+import BaseButton from "../BaseButton";
 import { RootState } from "_store";
 import { setMembershipSelected } from "../../store/slices/membershipSelected";
-import BaseButton from "../BaseButton";
 import styles from "./styles";
 
 const MembershipPicker: React.FC = () => {
@@ -13,20 +13,22 @@ const MembershipPicker: React.FC = () => {
     (state: RootState) => state.membershipSelected
   );
 
-  const handlePress = () => {
+  const handlePress = (selectedPlan: string) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-    dispatch(
-      setMembershipSelected(
-        membershipSelected === "Supporter" ? "Beliver" : "Supporter"
-      )
-    );
+    if (membershipSelected !== selectedPlan) {
+      dispatch(
+        setMembershipSelected(
+          membershipSelected === "Supporter" ? "Believer" : "Supporter"
+        )
+      );
+    }
   };
   return (
     <View>
       <View style={styles.planCardsContainer}>
         <Pressable
           onPress={() => {
-            handlePress();
+            handlePress("Supporter");
           }}
         >
           <LinearGradient
@@ -48,14 +50,14 @@ const MembershipPicker: React.FC = () => {
         </Pressable>
         <Pressable
           onPress={() => {
-            handlePress();
+            handlePress("Believer");
           }}
         >
           <LinearGradient
             start={[0, 0]}
             end={[0, 1]}
             colors={
-              membershipSelected === "Beliver"
+              membershipSelected === "Believer"
                 ? ["#EC6539", "#FF8862", "#FF9D66"]
                 : ["#262626", "#262626"]
             }

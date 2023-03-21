@@ -8,7 +8,7 @@ import {
   MembershipPicker,
   SondaPlusText,
 } from "_components";
-import { globalStyles } from "../../styles/styles";
+import { GlobalStyles } from "_styles";
 import styles from "./style";
 
 const SettingsScreen = () => {
@@ -20,8 +20,7 @@ const SettingsScreen = () => {
         <Text style={styles.heading}>Settings</Text>
         <IconButton
           iconPath={require("../../assets/images/close.svg")}
-          iconStyle={globalStyles.closeIcon}
-          contentFit={"contain"}
+          iconStyle={GlobalStyles.globalStyles.closeIcon}
           onPress={() => {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
             router.back();

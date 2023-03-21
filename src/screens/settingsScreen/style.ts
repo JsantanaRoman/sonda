@@ -1,6 +1,5 @@
 import { StyleSheet } from "react-native";
-import { Colors, Spacing } from "_styles";
-import { FONT_FAMILY_REGULAR } from "../../styles/typography";
+import { Colors, Mixins, Spacing, Typography } from "_styles";
 
 const styles = StyleSheet.create({
   container: {
@@ -19,15 +18,15 @@ const styles = StyleSheet.create({
     height: 108,
   },
   heading: {
-    fontSize: 40,
-    fontFamily: FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(40),
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
     letterSpacing: -2,
     lineHeight: 45.6,
     color: Colors.WHITE,
   },
   sectionHeading: {
-    fontSize: 20,
-    fontFamily: FONT_FAMILY_REGULAR,
+    fontSize: Mixins.scaleFont(20),
+    fontFamily: Typography.FONT_FAMILY_REGULAR,
     lineHeight: 22,
     color: Colors.WHITE,
     marginBottom: 24,

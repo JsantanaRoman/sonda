@@ -16,7 +16,6 @@ const PlaylistsScreen = () => {
         <IconButton
           iconPath={require("../../assets/images/close.svg")}
           iconStyle={globalStyles.closeIcon}
-          contentFit={"contain"}
           onPress={() => {
             router.back();
           }}

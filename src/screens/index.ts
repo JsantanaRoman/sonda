@@ -6,8 +6,8 @@ import SettingsScreen from "./SettingsScreen";
 
 export {
   AboutScreen,
+  CustomizeScreen,
   HomeScreen,
   PlaylistsScreen,
   SettingsScreen,
-  CustomizeScreen,
 };
