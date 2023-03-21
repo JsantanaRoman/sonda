@@ -6,6 +6,7 @@ import BaseButton from "../BaseButton";
 import { RootState } from "_store";
 import { setMembershipSelected } from "../../store/slices/membershipSelected";
 import styles from "./styles";
+import { Constants } from "_utils";
 
 const MembershipPicker: React.FC = () => {
   const dispatch = useDispatch();
@@ -13,12 +14,14 @@ const MembershipPicker: React.FC = () => {
     (state: RootState) => state.membershipSelected
   );
 
-  const handlePress = (selectedPlan: string) => {
+  const handlePress = (selectedPlan: Constants.planType) => {
     Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
     if (membershipSelected !== selectedPlan) {
       dispatch(
         setMembershipSelected(
-          membershipSelected === "Supporter" ? "Believer" : "Supporter"
+          membershipSelected === Constants.planType.Supporter
+            ? Constants.planType.Believer
+            : Constants.planType.Supporter
         )
       );
     }
@@ -28,14 +31,14 @@ const MembershipPicker: React.FC = () => {
       <View style={styles.planCardsContainer}>
         <Pressable
           onPress={() => {
-            handlePress("Supporter");
+            handlePress(Constants.planType.Supporter);
           }}
         >
           <LinearGradient
             start={[0, 0]}
             end={[0, 1]}
             colors={
-              membershipSelected === "Supporter"
+              membershipSelected === Constants.planType.Supporter
                 ? ["#EC6539", "#FF8862", "#FF9D66"]
                 : ["#262626", "#262626"]
             }
@@ -50,14 +53,14 @@ const MembershipPicker: React.FC = () => {
         </Pressable>
         <Pressable
           onPress={() => {
-            handlePress("Believer");
+            handlePress(Constants.planType.Believer);
           }}
         >
           <LinearGradient
             start={[0, 0]}
             end={[0, 1]}
             colors={
-              membershipSelected === "Believer"
+              membershipSelected === Constants.planType.Believer
                 ? ["#EC6539", "#FF8862", "#FF9D66"]
                 : ["#262626", "#262626"]
             }
@@ -73,7 +76,7 @@ const MembershipPicker: React.FC = () => {
       </View>
       <BaseButton
         text={
-          membershipSelected === "Supporter"
+          membershipSelected === Constants.planType.Supporter
             ? "Pay Yearly"
             : "Get Lifetime Access"
         }

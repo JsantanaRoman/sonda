@@ -103,3 +103,8 @@ export const makersList = [
     role: "Designer",
   },
 ];
+
+export enum planType {
+  Supporter,
+  Believer,
+}

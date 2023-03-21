@@ -1,12 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Constants } from "_utils";
 
 const membershipSelected = createSlice({
   name: "membershipSelected",
   initialState: {
-    membershipSelected: "Supporter",
+    membershipSelected: Constants.planType.Supporter,
   },
   reducers: {
-    setMembershipSelected(state, action: PayloadAction<string>) {
+    setMembershipSelected(state, action: PayloadAction<Constants.planType>) {
       state.membershipSelected = action.payload;
     },
   },
