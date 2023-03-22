@@ -1,7 +1,7 @@
-import { CustomizeScreen } from "_screens";
+import { Customize } from "_screens";
 
-const Customize = () => {
-  return <CustomizeScreen />;
+const CustomizeRoute = () => {
+  return <Customize />;
 };
 
-export default Customize;
+export default CustomizeRoute;

@@ -8,7 +8,7 @@ import { Constants } from "_utils";
 import { setPlayAll } from "../../store/slices/playAll";
 import styles from "./style";
 
-const HomeScreen = () => {
+const Home = () => {
   const dispatch = useDispatch();
   const { playAll } = useSelector((state: RootState) => state.playAll);
 
@@ -47,4 +47,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default Home;

@@ -68,14 +68,6 @@ export default function Layout() {
             headerRight: () => (
               <View style={styles.headingRight}>
                 <IconButton
-                  iconPath={require("../src/assets/images/hamburger.svg")}
-                  iconStyle={styles.headerIcons}
-                  onPress={() => {
-                    router.push("/playlists");
-                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-                  }}
-                />
-                <IconButton
                   iconPath={require("../src/assets/images/settings.svg")}
                   iconStyle={[
                     styles.headerIcons,

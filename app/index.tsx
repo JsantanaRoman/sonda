@@ -1,7 +1,7 @@
-import { HomeScreen } from "_screens";
+import { Home } from "_screens";
 
-const Home = () => {
-  return <HomeScreen />;
+const HomeRoute = () => {
+  return <Home />;
 };
 
-export default Home;
+export default HomeRoute;

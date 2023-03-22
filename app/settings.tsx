@@ -1,7 +1,7 @@
-import { SettingsScreen } from "_screens";
+import { Settings } from "_screens";
 
-const Settings = () => {
-  return <SettingsScreen />;
+const SettingsRoute = () => {
+  return <Settings />;
 };
 
-export default Settings;
+export default SettingsRoute;

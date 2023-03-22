@@ -4,7 +4,7 @@ import { Mixins } from "_styles";
 import { Constants } from "_utils";
 import styles from "./style";
 
-const AboutScreen = () => {
+const About = () => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.headingContainer}>
@@ -80,4 +80,4 @@ const AboutScreen = () => {
   );
 };
 
-export default AboutScreen;
+export default About;

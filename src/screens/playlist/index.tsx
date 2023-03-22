@@ -6,7 +6,7 @@ import { Constants } from "_utils";
 import { globalStyles } from "../../styles/styles";
 import styles from "./style";
 
-const PlaylistsScreen = () => {
+const Playlists = () => {
   const router = useRouter();
 
   return (
@@ -34,4 +34,4 @@ const PlaylistsScreen = () => {
   );
 };
 
-export default PlaylistsScreen;
+export default Playlists;

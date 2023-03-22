@@ -1,7 +1,7 @@
-import { AboutScreen } from "_screens";
+import { About } from "_screens";
 
-const About = () => {
-  return <AboutScreen />;
+const AboutRoute = () => {
+  return <About />;
 };
 
-export default About;
+export default AboutRoute;

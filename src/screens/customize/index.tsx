@@ -6,7 +6,7 @@ import { Constants } from "_utils";
 import { GlobalStyles } from "_styles";
 import styles from "./style";
 
-const CustomizeScreen = () => {
+const Customize = () => {
   const router = useRouter();
 
   return (
@@ -41,4 +41,4 @@ const CustomizeScreen = () => {
   );
 };
 
-export default CustomizeScreen;
+export default Customize;

@@ -1,7 +1,7 @@
-import { PlaylistsScreen } from "_screens";
+import { Playlists } from "_screens";
 
-const Playlist = () => {
-  return <PlaylistsScreen />;
+const PlaylistRoute = () => {
+  return <Playlists />;
 };
 
-export default Playlist;
+export default PlaylistRoute;

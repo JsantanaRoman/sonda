@@ -11,7 +11,7 @@ import {
 import { GlobalStyles } from "_styles";
 import styles from "./style";
 
-const SettingsScreen = () => {
+const Settings = () => {
   const router = useRouter();
 
   return (
@@ -86,4 +86,4 @@ const SettingsScreen = () => {
   );
 };
 
-export default SettingsScreen;
+export default Settings;
