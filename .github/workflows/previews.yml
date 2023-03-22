@@ -1,35 +1,27 @@
-name: preview
-on: pull_request
-
+on: [pull_request]
 jobs:
-  update:
-    name: EAS Update
+  preview:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
     steps:
-
-      - name: Checkout repository
+      - name: 🏗 Setup repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: 🏗 Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
           cache: npm
 
-      - name: Setup EAS
+      - name: 🏗 Setup EAS
         uses: expo/expo-github-action@v8
         with:
-          eas-version: latest
+          expo-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
-          expo-cache: false
-          eas-cache: false
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: npm install
 
-      - name: Create preview
+      - name: 🚀 Create preview
         uses: expo/expo-github-action/preview@v8
         with:
           command: eas update --auto
