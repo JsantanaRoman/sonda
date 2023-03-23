@@ -46,6 +46,7 @@ export default function Layout() {
   return (
     <Provider store={store}>
       <Stack
+        initialRouteName="index"
         screenOptions={{
           headerStyle: {
             backgroundColor: Colors.BLACK,

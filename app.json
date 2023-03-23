@@ -18,16 +18,17 @@
       "supportsTablet": true,
       "config": {
         "usesNonExemptEncryption": false
-      }
+      },
+      "bundleIdentifier": "com.sonda.pr"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/splash.png",
         "backgroundColor": "#000000"
-      }
+      },
+      "package": "com.sonda.pr"
     },
     "scheme": "myapp",
-
     "web": {
       "bundler": "metro"
     },
