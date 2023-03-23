@@ -37,6 +37,10 @@ const Settings = () => {
         <ListItem
           text="See Features"
           iconPath={require("../../assets/images/stars.svg")}
+          onPress={() => {
+            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+            router.push("/features");
+          }}
         />
         <Text style={styles.sectionHeading}>Settings</Text>
         <ListItem

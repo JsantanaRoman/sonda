@@ -4,7 +4,7 @@ import * as Haptics from "expo-haptics";
 import { Stack, useRouter } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useState } from "react";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { Colors, Spacing, GlobalStyles } from "_styles";
 import { IconButton } from "_components";
 import { Provider } from "react-redux";
@@ -95,6 +95,29 @@ export default function Layout() {
           options={{
             presentation: "modal",
             headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="features"
+          options={{
+            headerStyle: { backgroundColor: Colors.BLACK },
+            headerTitleStyle: { color: Colors.WHITE },
+            presentation: "modal",
+            headerTitle: "Features",
+            headerLeft: () => (
+              <Text style={{ color: Colors.GRAY_300 }}>Restore</Text>
+            ),
+            headerRight: () => (
+              <View>
+                <IconButton
+                  iconPath={require("../src/assets/images/close.svg")}
+                  iconStyle={GlobalStyles.globalStyles.closeIcon}
+                  onPress={() => {
+                    router.back();
+                  }}
+                />
+              </View>
+            ),
           }}
         />
         <Stack.Screen
