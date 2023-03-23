@@ -28,7 +28,7 @@
       },
       "package": "com.sonda.pr"
     },
-    "scheme": "myapp",
+    "scheme": "sonda",
     "web": {
       "bundler": "metro"
     },
