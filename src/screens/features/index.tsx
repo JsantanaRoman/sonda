@@ -96,29 +96,32 @@ const Features = () => {
           </View>
         </ImageBackground>
       </View>
-      {/* 
-        Image with Text Container 
-        image={require("")
-        text ="All sounds for you to play anytime.
-        Without limits."
-      */}
-      {/* 
-        Image with Text Container 
-        image={require("")
-        text ="Unlock icons to spice up your Home Screen."
-      */}
-      {/* 
-       membershipSelected === Constants.planType.Believer
-        Image with Text Container 
-        image={require("")
-        text ="Unlimited updates. Forever."
-      */}
-      {/* 
-        Image with Text Container 
-        image={require("")
-        text ="No ads, no tracking. Ever."
-      */}
-      <View style={{ height: 20 }}></View>
+      <View style={{ height: 35 }}></View>
+      <View style={styles.featureBoxImageContainer}>
+        <Image
+          style={styles.featureBoxImage}
+          contentFit="contain"
+          source={require("../../assets/images/featurebox-one.png")}
+        />
+        <Image
+          style={styles.featureBoxImage}
+          contentFit="contain"
+          source={require("../../assets/images/featurebox-two.png")}
+        />
+        {membershipSelected === Constants.planType.Believer && (
+          <Image
+            style={styles.featureBoxImage}
+            contentFit="contain"
+            source={require("../../assets/images/featurebox-three.png")}
+          />
+        )}
+        <Image
+          style={styles.featureBoxImage}
+          contentFit="contain"
+          source={require("../../assets/images/featurebox-four.png")}
+        />
+      </View>
+      <View style={{ height: 40 }}></View>
       <View>
         <BaseButton
           text={
@@ -128,6 +131,7 @@ const Features = () => {
           }
           onPress={() => Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light)}
         />
+        <View style={{ height: 100 }}></View>
       </View>
     </ScrollView>
   );

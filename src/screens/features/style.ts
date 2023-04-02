@@ -26,6 +26,14 @@ const styles = StyleSheet.create({
     height: 37,
     width: 173,
   },
+  featureBoxImageContainer: {
+    alignItems: "center",
+  },
+  featureBoxImage: {
+    width: Mixins.WINDOW_WIDTH,
+    height: 253,
+    marginBottom: Spacing.SCALE_16,
+  },
   planButtonContainer: {
     flex: 1,
     flexDirection: "row",
