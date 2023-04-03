@@ -1,4 +1,4 @@
-# sonda
+# sonda - preview
 
 Sonda was created as an experiment to bring people closer to the island and its culture. Our idea behind this app is to use these sounds as a way to relax, focus, or simply transport oneself to the tropical paradise that is Puerto Rico.
 
