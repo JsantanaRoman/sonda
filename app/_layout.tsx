@@ -128,6 +128,20 @@ export default function Layout() {
           }}
         />
         <Stack.Screen
+          name="privacy"
+          options={{
+            presentation: "modal",
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="terms"
+          options={{
+            presentation: "modal",
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
           name="about"
           options={{
             headerStyle: { backgroundColor: Colors.BLACK },

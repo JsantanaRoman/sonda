@@ -63,10 +63,18 @@ const Settings = () => {
         <ListItem
           text="Privacy Policy"
           iconPath={require("../../assets/images/shield.svg")}
+          onPress={() => {
+            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+            router.push("/privacy");
+          }}
         />
         <ListItem
           text="Terms and Conditions"
           iconPath={require("../../assets/images/t&c.svg")}
+          onPress={() => {
+            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+            router.push("/terms");
+          }}
         />
         <ListItem
           text="About Sonda"

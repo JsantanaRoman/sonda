@@ -6,6 +6,7 @@ import PlaylistCard from "./PlaylistCard";
 import RadioButton from "./RadioButton";
 import SondaPlusText from "./SondaPlusText";
 import SoundCard from "./SoundCard";
+import WebComponent from "./WebComponent";
 
 export {
   BaseButton,
@@ -16,4 +17,5 @@ export {
   RadioButton,
   SoundCard,
   SondaPlusText,
+  WebComponent,
 };
