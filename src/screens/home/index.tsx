@@ -20,14 +20,13 @@ const Home = () => {
     <View style={{ flex: 1 }}>
       <StatusBar backgroundColor={Colors.BLACK} style="light" />
       <SafeAreaView style={{ backgroundColor: Colors.BLACK }}>
-        {/* TODO: Replace Index with keyExtractor or add key to item attribute */}
         <FlatList
           style={styles.container}
           data={Constants.SoundList}
-          renderItem={({ item, index }) => (
+          keyExtractor={(item) => item.name}
+          renderItem={({ item }) => (
             <SoundCard
               name={item.name}
-              key={index}
               soundPath={item.soundPath}
               available={item.available}
             />

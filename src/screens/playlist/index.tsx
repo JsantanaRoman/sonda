@@ -21,15 +21,13 @@ const Playlists = () => {
           }}
         />
       </View>
-      {/* TODO: Replace Index with keyExtractor or add key to item attribute */}
       <FlatList
         contentContainerStyle={styles.contentContainer}
         data={Constants.PlaylistList}
         horizontal={false}
         numColumns={2}
-        renderItem={({ item, index }) => (
-          <PlaylistCard name={item.name} key={index} />
-        )}
+        keyExtractor={(item) => item.name}
+        renderItem={({ item }) => <PlaylistCard name={item.name} />}
       />
     </View>
   );

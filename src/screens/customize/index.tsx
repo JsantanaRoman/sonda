@@ -22,10 +22,10 @@ const Customize = () => {
         />
       </View>
       <Text style={styles.sectionHeading}>Change Icon</Text>
-      {/* TODO: Replace Index with keyExtractor or add key to item attribute */}
       <FlatList
         numColumns={3}
         data={Constants.customLogos}
+        keyExtractor={(item) => item.id.toString()}
         columnWrapperStyle={{ justifyContent: "space-between" }}
         ItemSeparatorComponent={() => <View style={{ height: 40 }}></View>}
         renderItem={({ item, index }) => (
@@ -34,7 +34,7 @@ const Customize = () => {
               source={item.image}
               style={{ width: "100%", height: "100%" }}
             />
-            <RadioButton isSelected={index === 0 ? true : false} />
+            <RadioButton isSelected={index === item.id ? true : false} />
           </View>
         )}
       />

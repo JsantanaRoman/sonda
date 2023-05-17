@@ -36,13 +36,13 @@ const About = () => {
         Sonda offers a unique and immersive way to do so.
       </Text>
       <Text style={styles.sectionHeading}>Makers</Text>
-      {/* TODO: Add keyExtractor or add key to item attribute */}
       <FlatList
         contentContainerStyle={{ marginBottom: 40 }}
         scrollEnabled={false}
         numColumns={2}
         data={Constants.makersList}
         columnWrapperStyle={{ justifyContent: "space-between" }}
+        keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View
             style={[
