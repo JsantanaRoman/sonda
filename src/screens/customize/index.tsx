@@ -22,6 +22,7 @@ const Customize = () => {
         />
       </View>
       <Text style={styles.sectionHeading}>Change Icon</Text>
+      {/* TODO: Replace Index with keyExtractor or add key to item attribute */}
       <FlatList
         numColumns={3}
         data={Constants.customLogos}
