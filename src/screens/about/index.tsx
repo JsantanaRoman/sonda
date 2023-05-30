@@ -13,7 +13,8 @@ const About = () => {
         </View>
         <View style={styles.headingContainerRight}>
           <Text style={styles.headingTextRightOne}>
-            Independent Bootstrapped{" "}
+            Independent Bootstrapped
+            {"\n"}
             <Text style={styles.headingTextRightTwo}>De aquí</Text>
           </Text>
         </View>

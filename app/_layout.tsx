@@ -103,6 +103,7 @@ export default function Layout() {
           options={{
             headerStyle: { backgroundColor: Colors.BLACK },
             headerTitleStyle: { color: Colors.WHITE },
+            headerTitleAlign: "center",
             presentation: "modal",
             headerTitle: "Features",
             headerLeft: () => (

@@ -1,7 +1,3 @@
-import * as Haptics from "expo-haptics";
-import { Image } from "expo-image";
-import { useRouter } from "expo-router";
-import { ScrollView, Text, View } from "react-native";
 import {
   IconButton,
   ListItem,
@@ -9,6 +5,11 @@ import {
   SondaPlusText,
 } from "_components";
 import { GlobalStyles } from "_styles";
+import * as Haptics from "expo-haptics";
+import { Image } from "expo-image";
+import { useRouter } from "expo-router";
+import * as StoreReview from "expo-store-review";
+import { ScrollView, Text, View } from "react-native";
 import styles from "./style";
 
 const Settings = () => {
@@ -87,6 +88,10 @@ const Settings = () => {
         <ListItem
           text="Do you love us?"
           iconPath={require("../../../assets/images/love.svg")}
+          onPress={() => {
+            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+            StoreReview.requestReview();
+          }}
         />
         <Image
           style={styles.madeInPRLogo}

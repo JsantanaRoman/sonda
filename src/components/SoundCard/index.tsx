@@ -1,12 +1,13 @@
 import { Slider } from "@miblanchard/react-native-slider";
+import { RootState } from "_store";
+import { Colors } from "_styles";
 import { Audio, AVPlaybackSource } from "expo-av";
 import * as Haptics from "expo-haptics";
 import { Image } from "expo-image";
+import { useRouter } from "expo-router";
 import { useEffect, useRef, useState } from "react";
 import { Pressable, Text, View } from "react-native";
 import { useSelector } from "react-redux";
-import { RootState } from "_store";
-import { Colors } from "_styles";
 import styles from "./styles";
 
 export type Props = {
@@ -17,6 +18,8 @@ export type Props = {
 };
 
 const SoundCard: React.FC<Props> = ({ name, available, soundPath }) => {
+  const router = useRouter();
+
   const [isloaded, setIsLoaded] = useState(false);
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0);
@@ -62,7 +65,7 @@ const SoundCard: React.FC<Props> = ({ name, available, soundPath }) => {
             style={styles.lockContainer}
             onPress={() => {
               Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-              console.log("Modal PopUp");
+              router.push("/features");
             }}
           >
             <Image
