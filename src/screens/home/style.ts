@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.BLACK,
     color: Colors.PRIMARY,
     paddingHorizontal: Spacing.SCALE_16,
+    paddingVertical: Spacing.SCALE_8,
   },
   playButtonContainer: {
     borderRadius: 50,

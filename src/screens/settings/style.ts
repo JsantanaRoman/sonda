@@ -3,6 +3,7 @@ import { Colors, Mixins, Spacing, Typography } from "_styles";
 
 const styles = StyleSheet.create({
   container: {
+    marginTop: Mixins.WINDOW_HEIGHT * 0.1,
     flex: 1,
     backgroundColor: Colors.BLACK,
     color: Colors.PRIMARY,
