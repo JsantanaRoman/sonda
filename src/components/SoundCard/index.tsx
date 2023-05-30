@@ -68,7 +68,7 @@ const SoundCard: React.FC<Props> = ({ name, available, soundPath }) => {
             <Image
               style={styles.lockIcon}
               contentFit="contain"
-              source={require("../../assets/images/lock.svg")}
+              source={require("../../../assets/images/lock.svg")}
             />
           </Pressable>
           <View style={styles.locked}></View>
@@ -91,8 +91,8 @@ const SoundCard: React.FC<Props> = ({ name, available, soundPath }) => {
               contentFit="contain"
               source={
                 playing
-                  ? require("../../assets/images/volume-on.svg")
-                  : require("../../assets/images/volume-off.svg")
+                  ? require("../../../assets/images/volume-on.svg")
+                  : require("../../../assets/images/volume-off.svg")
               }
             />
           </Pressable>

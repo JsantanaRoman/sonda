@@ -41,14 +41,14 @@ const Features = () => {
           resizeMode="contain"
           source={
             membershipSelected === Constants.planType.Supporter
-              ? require("../../assets/images/supporter-card.png")
-              : require("../../assets/images/believer-card.png")
+              ? require("../../../assets/images/supporter-card.png")
+              : require("../../../assets/images/believer-card.png")
           }
           style={styles.backgroundImageContainer}
           imageStyle={styles.backgroundImage}
         >
           <Image
-            source={require("../../assets/images/sonda-plus.png")}
+            source={require("../../../assets/images/sonda-plus.png")}
             style={styles.sondaPlus}
           />
           <View style={styles.planButtonContainer}>
@@ -101,24 +101,24 @@ const Features = () => {
         <Image
           style={styles.featureBoxImage}
           contentFit="contain"
-          source={require("../../assets/images/featurebox-one.png")}
+          source={require("../../../assets/images/featurebox-one.png")}
         />
         <Image
           style={styles.featureBoxImage}
           contentFit="contain"
-          source={require("../../assets/images/featurebox-two.png")}
+          source={require("../../../assets/images/featurebox-two.png")}
         />
         {membershipSelected === Constants.planType.Believer && (
           <Image
             style={styles.featureBoxImage}
             contentFit="contain"
-            source={require("../../assets/images/featurebox-three.png")}
+            source={require("../../../assets/images/featurebox-three.png")}
           />
         )}
         <Image
           style={styles.featureBoxImage}
           contentFit="contain"
-          source={require("../../assets/images/featurebox-four.png")}
+          source={require("../../../assets/images/featurebox-four.png")}
         />
       </View>
       <View style={{ height: 40 }}></View>

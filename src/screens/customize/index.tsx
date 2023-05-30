@@ -1,9 +1,10 @@
+import { IconButton, RadioButton } from "_components";
+import { GlobalStyles } from "_styles";
+import { Constants } from "_utils";
+import * as Haptics from "expo-haptics";
 import { Image } from "expo-image";
 import { useRouter } from "expo-router";
 import { FlatList, Text, View } from "react-native";
-import { IconButton, RadioButton } from "_components";
-import { Constants } from "_utils";
-import { GlobalStyles } from "_styles";
 import styles from "./style";
 
 const Customize = () => {
@@ -14,9 +15,10 @@ const Customize = () => {
       <View style={styles.headingContainer}>
         <Text style={styles.heading}>Customize</Text>
         <IconButton
-          iconPath={require("../../assets/images/close.svg")}
+          iconPath={require("../../../assets/images/close.svg")}
           iconStyle={GlobalStyles.globalStyles.closeIcon}
           onPress={() => {
+            Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
             router.back();
           }}
         />

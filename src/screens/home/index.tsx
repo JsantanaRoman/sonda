@@ -36,8 +36,8 @@ const Home = () => {
       <IconButton
         iconPath={
           !playAll
-            ? require("../../assets/images/play.svg")
-            : require("../../assets/images/pause.svg")
+            ? require("../../../assets/images/play.svg")
+            : require("../../../assets/images/pause.svg")
         }
         containerStyle={styles.playButtonContainer}
         iconStyle={styles.playButton}

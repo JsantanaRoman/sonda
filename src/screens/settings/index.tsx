@@ -19,7 +19,7 @@ const Settings = () => {
       <View style={styles.headingContainer}>
         <Text style={styles.heading}>Settings</Text>
         <IconButton
-          iconPath={require("../../assets/images/close.svg")}
+          iconPath={require("../../../assets/images/close.svg")}
           iconStyle={GlobalStyles.globalStyles.closeIcon}
           onPress={() => {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
@@ -32,11 +32,11 @@ const Settings = () => {
         <MembershipPicker />
         <ListItem
           text="Restore purchase"
-          iconPath={require("../../assets/images/money.svg")}
+          iconPath={require("../../../assets/images/money.svg")}
         />
         <ListItem
           text="See Features"
-          iconPath={require("../../assets/images/stars.svg")}
+          iconPath={require("../../../assets/images/stars.svg")}
           onPress={() => {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
             router.push("/features");
@@ -45,7 +45,7 @@ const Settings = () => {
         <Text style={styles.sectionHeading}>Settings</Text>
         <ListItem
           text="Customize"
-          iconPath={require("../../assets/images/wand.svg")}
+          iconPath={require("../../../assets/images/wand.svg")}
           onPress={() => {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
             router.push("/customize");
@@ -54,15 +54,15 @@ const Settings = () => {
         <Text style={styles.sectionHeading}>Information</Text>
         <ListItem
           text="Contact"
-          iconPath={require("../../assets/images/mail.svg")}
+          iconPath={require("../../../assets/images/mail.svg")}
         />
         <ListItem
           text="Send Feedback"
-          iconPath={require("../../assets/images/message.svg")}
+          iconPath={require("../../../assets/images/message.svg")}
         />
         <ListItem
           text="Privacy Policy"
-          iconPath={require("../../assets/images/shield.svg")}
+          iconPath={require("../../../assets/images/shield.svg")}
           onPress={() => {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
             router.push("/privacy");
@@ -70,7 +70,7 @@ const Settings = () => {
         />
         <ListItem
           text="Terms and Conditions"
-          iconPath={require("../../assets/images/t&c.svg")}
+          iconPath={require("../../../assets/images/terms-and-conditions.svg")}
           onPress={() => {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
             router.push("/terms");
@@ -78,7 +78,7 @@ const Settings = () => {
         />
         <ListItem
           text="About Sonda"
-          iconPath={require("../../assets/images/about-us.svg")}
+          iconPath={require("../../../assets/images/about-us.svg")}
           onPress={() => {
             Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
             router.push("/about");
@@ -86,11 +86,11 @@ const Settings = () => {
         />
         <ListItem
           text="Do you love us?"
-          iconPath={require("../../assets/images/love.svg")}
+          iconPath={require("../../../assets/images/love.svg")}
         />
         <Image
           style={styles.madeInPRLogo}
-          source={require("../../assets/images/made-in-pr.png")}
+          source={require("../../../assets/images/made-in-pr.svg")}
           contentFit="contain"
         ></Image>
       </ScrollView>

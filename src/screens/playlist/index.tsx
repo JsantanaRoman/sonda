@@ -14,7 +14,7 @@ const Playlists = () => {
       <View style={styles.headingContainer}>
         <Text style={styles.heading}>Playlist</Text>
         <IconButton
-          iconPath={require("../../assets/images/close.svg")}
+          iconPath={require("../../../assets/images/close.svg")}
           iconStyle={globalStyles.closeIcon}
           onPress={() => {
             router.back();

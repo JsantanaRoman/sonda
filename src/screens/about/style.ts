@@ -3,13 +3,14 @@ import { Colors, Mixins, Spacing, Typography } from "_styles";
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 100,
+    paddingTop: 55,
     flex: 1,
     backgroundColor: Colors.BLACK,
     paddingHorizontal: Spacing.SCALE_16,
   },
   headingContainer: {
     flexDirection: "row",
+    marginBottom: 55,
   },
   headingContainerRight: {
     flexDirection: "column",
@@ -20,8 +21,8 @@ const styles = StyleSheet.create({
   },
   headingContainerLeft: {
     flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
     flexBasis: "50%",
     flexGrow: 0,
     marginBottom: 40,
@@ -37,6 +38,7 @@ const styles = StyleSheet.create({
     fontFamily: Typography.FONT_FAMILY_REGULAR,
     fontSize: Mixins.scaleFont(30),
     lineHeight: 36,
+    marginTop: 20,
   },
   headingTextRightTwo: {
     color: Colors.WHITE,

@@ -1,47 +1,51 @@
+import { IconButton } from "_components";
+import { store } from "_store";
+import { Colors, GlobalStyles, Spacing } from "_styles";
 import { Audio } from "expo-av";
 import * as Fonts from "expo-font";
 import * as Haptics from "expo-haptics";
+import { Image } from "expo-image";
 import { Stack, useRouter } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
-import { useState } from "react";
-import { StyleSheet, View, Text } from "react-native";
-import { Colors, Spacing, GlobalStyles } from "_styles";
-import { IconButton } from "_components";
+import { useEffect } from "react";
+import { StyleSheet, Text, View } from "react-native";
 import { Provider } from "react-redux";
-import { store } from "_store";
-import {} from "_styles";
 
 let customFonts = {
-  "AtHauss-Regular": require("./../src/assets/fonts/AtHaussStd-Retina.otf"),
-  "AtHauss-Medium": require("./../src/assets/fonts/AtHaussStd-Medium.otf"),
-  "AtHauss-Super": require("./../src/assets/fonts/AtHaussStd-Super.otf"),
+  "AtHauss-Regular": require("../assets/fonts/AtHaussStd-Retina.otf"),
+  "AtHauss-Medium": require("../assets/fonts/AtHaussStd-Medium.otf"),
+  "AtHauss-Super": require("../assets/fonts/AtHaussStd-Super.otf"),
 };
 
 SplashScreen.preventAutoHideAsync();
 
+export const unstable_settings = {
+  initialRouteName: "index",
+};
+
 export default function Layout() {
-  const [initialize, setinitialize] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    hideSplash();
+  }, []);
+
+  const hideSplash = async () => {
+    try {
+      initializeApp();
+    } catch {}
+  };
 
   const initializeApp = async () => {
     try {
       await Fonts.loadAsync(customFonts);
       Audio.requestPermissionsAsync();
       Audio.setAudioModeAsync({ playsInSilentModeIOS: true });
-      setinitialize(true);
-      if (initialize) {
-        SplashScreen.hideAsync();
-      }
-
-      if (!initialize) {
-        return null;
-      }
+      await SplashScreen.hideAsync();
     } catch (error) {
       console.log("Initialization Error:", error);
     }
   };
-
-  initializeApp();
 
   return (
     <Provider store={store}>
@@ -58,18 +62,15 @@ export default function Layout() {
           name="index"
           options={{
             headerLeft: () => (
-              <IconButton
-                iconPath={require("../src/assets/images/logo.svg")}
-                iconStyle={styles.headerLogo}
-                onPress={() => {
-                  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
-                }}
+              <Image
+                source={require("../assets/images/logo.svg")}
+                style={styles.headerLogo}
               />
             ),
             headerRight: () => (
               <View style={styles.headingRight}>
                 <IconButton
-                  iconPath={require("../src/assets/images/settings.svg")}
+                  iconPath={require("../assets/images/settings.svg")}
                   iconStyle={[
                     styles.headerIcons,
                     { marginLeft: Spacing.SCALE_24 },
@@ -110,9 +111,10 @@ export default function Layout() {
             headerRight: () => (
               <View>
                 <IconButton
-                  iconPath={require("../src/assets/images/close.svg")}
+                  iconPath={require("../assets/images/close.svg")}
                   iconStyle={GlobalStyles.globalStyles.closeIcon}
                   onPress={() => {
+                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
                     router.back();
                   }}
                 />
@@ -151,9 +153,10 @@ export default function Layout() {
             headerRight: () => (
               <View>
                 <IconButton
-                  iconPath={require("../src/assets/images/close.svg")}
+                  iconPath={require("../assets/images/close.svg")}
                   iconStyle={GlobalStyles.globalStyles.closeIcon}
                   onPress={() => {
+                    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
                     router.back();
                   }}
                 />
@@ -175,11 +178,11 @@ const styles = StyleSheet.create({
     height: 41,
   },
   headerIcons: {
-    height: 16,
-    width: 16,
+    height: 22,
+    width: 22,
   },
   headerLogo: {
-    height: 24,
+    height: 41,
     width: 27,
     display: "flex",
     flexDirection: "row",
